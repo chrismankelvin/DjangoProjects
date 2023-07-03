@@ -1,0 +1,71 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website Title</title>
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+    <link rel="stylesheet" href="{% static 'Vlog/main.css' %}">
+    <!-- <link rel="icon" type="image/png" href="./youtube.png" sizes="2x3">
+  <link rel="icon" type="image/png" href="./twitter.png" sizes="1x1"> -->
+  
+  {% if title %}
+        <title>Django Vlog - {{ title }} </title>
+  {% else %}
+        <title>Django Vlog</title>
+  {% endif %}
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="{% url 'Vlog-home' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'Vlog-service' %}">Services</a></li>
+                    <li><a href="{% url 'Vlog-about' %}">About</a></li>
+                    <li><a href="{% url 'Vlog-signup' %}">Sign Up</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main class="mainn">
+            {% if messages %}
+              {% for message in messages %}
+                <div>{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+            {% block content %}{% endblock %}
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./logo.png" alt="Richard Educational Consult Logo">
+                </div>
+                <div class="footer-contact">
+                    <p>Email: info@example.com</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="./twitter.png" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <span class="link-divider"></span>
+                    <a href="#">Support</a>
+                    <span class="link-divider"></span>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Richard Educational Consult | Designed by Chrisman's Technologies</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
