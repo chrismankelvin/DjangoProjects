@@ -231,12 +231,13 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffffea;
   }
   
   .services-page h2 {
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
   }
   
   .service {
@@ -359,6 +360,8 @@
   .social-icons a {
     display: inline-block;
     margin-right: 10px;
+    width: 20px;
+    height: 10px;
   }
   
   .footer-links a {
@@ -445,6 +448,8 @@
   
   .post-list {
     margin-bottom: 20px;
+    background-color: #88e48c18;
+    padding: 5px;
   }
   
   .post {
@@ -460,6 +465,11 @@
   
   .post p {
     font-size: 16px;
+    text-transform: capitalize;
+  }
+  .post p1 {
+    font-size: 16px;
+
   }
   
   /* Post form styles */

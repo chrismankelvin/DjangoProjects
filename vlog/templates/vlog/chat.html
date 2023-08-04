@@ -5,9 +5,9 @@
         <div class="post-list">
             {% for post in posts %}
                 <div class="post">
-                    <h2>{{ post.title }}</h2>
                     <p>By {{ post.author }} on {{ post.date_posted|date:"F d, Y" }} </p>
-                    <p>{{ post.content }}</p>
+                    <h2>{{ post.title }}</h2>
+                    <p1>{{ post.content }}</p1>
                 </div>
                 <hr>
             {% endfor %}
